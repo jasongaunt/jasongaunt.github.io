@@ -1,5 +1,3 @@
-## Random bits of knowledge
-
 Welcome. Here you'll find some useful bits of information for various tasks I have completed over the years and now (hopefully) you yourself are now trying to do.
 
 This will be a small collection of short how-tos that aim to be clear and straight to the point, allowing it to be easily followed by any systems administrator with a little *nix knowledge.
