@@ -1,3 +1,20 @@
+- [Preamble](#preamble)
+- [Expectations](#expectations)
+- [Setting up the hardware (ESXi only)](#setting-up-the-hardware--esxi-only-)
+  * [Hardware requirements](#hardware-requirements)
+  * [ESXi host setup](#esxi-host-setup)
+  * [Guest OS setup](#guest-os-setup)
+- [Setting up the OS](#setting-up-the-os)
+  * [Installation](#installation)
+  * [Set a static IP address (optional)](#set-a-static-ip-address--optional-)
+  * [Disable the built-in graphics driver and apply pending system updates](#disable-the-built-in-graphics-driver-and-apply-pending-system-updates)
+- [Build the software](#build-the-software)
+  * [Install software dependencies](#install-software-dependencies)
+  * [Build ffmpeg with NVENC support](#build-ffmpeg-with-nvenc-support)
+- [Optional extras](#optional-extras)
+  * [Install and configure Shinobi Video for hardware decoding (optional)](#install-and-configure-shinobi-video-for-hardware-decoding--optional-)
+  * [Install and patch Plex Media Server for sequential hardware video decoding / encoding (optional)](#install-and-patch-plex-media-server-for-sequential-hardware-video-decoding---encoding--optional-)
+
 #### Preamble
 
 I recently noticed that the CPU for my Ubuntu guest OS in my home ESXi server was using a heavy amount of CPU for both [Shinobi Video](https://shinobi.video/) (CCTV recording software) and [Plex Media Server](https://www.plex.tv/).
@@ -86,7 +103,7 @@ You will most likely want to change the IPs to suit your own network.
 
 3. Run `netplan apply` to apply the IP address. If you are connected via SSH this will most likely now boot you out and you'll need to reconnect by the new address
 
-#### Disable the built-in graphics driver and apply pending system updates
+##### Disable the built-in graphics driver and apply pending system updates
 
 1. We **must** disable _nouveau_ (the built in graphics card driver) for this to work, you can do this by running this command;
 
@@ -101,7 +118,9 @@ update-initramfs -u
 apt -y update && apt -y upgrade && reboot
 ```
 
-#### Install software dependencies
+#### Build the software
+
+##### Install software dependencies
 
 1. We need to add a new repository to `apt` so that we can build `ffmpeg`, run the following commands;
 
@@ -175,7 +194,7 @@ Thu Aug 27 21:08:26 2020
 
 If at this point you get an error or don't see the above output, continuing with this guide will be pointless.
 
-#### Build ffmpeg with NVENC support
+##### Build ffmpeg with NVENC support
 
 1. First we need to build one external dependency (`vmaf`), this one is quick;
 
@@ -221,7 +240,9 @@ If this has worked successfully you should see a few lines that look like this a
  V..... hevc_nvenc           NVIDIA NVENC hevc encoder (codec hevc)
 ```
 
-#### Install and configure Shinobi Video for hardware decoding (optional)
+#### Optional extras
+
+##### Install and configure Shinobi Video for hardware decoding (optional)
 
 1. Install [Shinobi Video](https://shinobi.video/docs/start) by doing the following;
 
@@ -238,7 +259,7 @@ INSTALL/ubuntu.sh
 4. Once installed, run `pm2 save` to make it start on boot
 5. When adding a camera follow the `How to Decode an RTSP Stream with NVIDIA Graphics Cards` part of [this](https://shinobi.video/docs/gpu) guide
 
-#### Install and patch Plex Media Server for sequential hardware video decoding / encoding (optional)
+##### Install and patch Plex Media Server for sequential hardware video decoding / encoding (optional)
 
 *Reminder*: Plex requires a paid-for [Plex Pass](https://www.plex.tv/en-gb/plex-pass/) to enable hardware video encoding / decoding support.
 
