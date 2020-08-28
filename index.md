@@ -1,37 +1,15 @@
-## Welcome to GitHub Pages
+## Random bits of knowledge
 
-You can use the [editor on GitHub](https://github.com/jasongaunt/jasongaunt.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+Welcome. Here you'll find some useful bits of information for various tasks I have completed over the years and now (hopefully) you yourself are now trying to do.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+This will be a small collection of short how-tos that aim to be clear and straight to the point, allowing it to be easily followed by any systems administrator with a little *nix knowledge.
 
-### Markdown
+#### Guides
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+* [Getting ESXi to auto-mount a FreeNAS guest OS iSCSI datastore on boot](guides/esxi-freenas.md)
+* [Controlling cooling fans in ESXi on a Supermicro X8 / X9 / X10 / X11 series motherboard](https://github.com/jasongaunt/Supermicro-Fan-Control)
+* [Building FFMPEG CUDA / NVENC support in an Ubuntu 20.40 for Shinobi Video / Plex Media Server](guides/ubuntu-2004-cuda-ffmpeg.md)
 
-```markdown
-Syntax highlighted code block
+#### Contact me
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/jasongaunt/jasongaunt.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+I can be located on Facebook by searching for "bagjason", alternatively you can email me at this websites name (github), followed by the @ symbol, followed by akao and then followed by .co.uk.
