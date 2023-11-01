@@ -186,7 +186,7 @@ while true; do
         killall unclutter > /dev/null 2>&1
         unclutter -idle 0 &
 
-        surf -b -d -F -z "${KIOSKZOOM}" "${KIOSKHOST}"
+        surf -b -d -g -m -t -X -F -z "${KIOSKZOOM}" "${KIOSKHOST}"
 done
 ```
 
