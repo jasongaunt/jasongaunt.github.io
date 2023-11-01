@@ -5,6 +5,7 @@
 - [Hardware Requirements](#hardware-requirements)
 - [Software Configuration](#software-configuration)
 - [USB RNDIS Gadget Activation Process](#usb-rndis-gadget-activation-process)
+- [Locking It Down](#locking-it-down)
 - [Credits](#credits)
 
 ## Preamble
@@ -52,7 +53,6 @@ See the [USB RNDIS Gadget Activation Process Page](raspberry-pi-usb-kiosk-gadget
 ## Locking It Down
 
 See the [Locking It Down Page](raspberry-pi-usb-kiosk-overlay.md)
-
 
 ## Credits
 
