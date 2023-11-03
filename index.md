@@ -11,4 +11,4 @@ This will be a small collection of short how-tos that aim to be clear and straig
 
 #### Contact me
 
-I can be located on Facebook by searching for "bagjason", alternatively you can email me at this websites name (github), followed by the @ symbol, followed by akao and then followed by .co.uk.
+I can be located on the book of faces by searching for "bagjason", alternatively you can email me at this websites name (github), followed by the @ symbol, followed by akao and then followed by .co.uk.

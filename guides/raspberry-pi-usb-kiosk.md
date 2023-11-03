@@ -56,6 +56,6 @@ See the [Locking It Down Page](raspberry-pi-usb-kiosk-overlay.md)
 
 ## Credits
 
-* zram-config script - https://github.com/ecdye/zram-config/tree/main
-* Pi 4 Model B usb.h script - https://www.hardill.me.uk/wordpress/2019/11/02/pi4-usb-c-gadget/
+* zram-config script - [https://github.com/ecdye/zram-config/tree/main](https://github.com/ecdye/zram-config/tree/main)
+* Pi 4 Model B usb.h script - [https://www.hardill.me.uk/wordpress/2019/11/02/pi4-usb-c-gadget/](https://www.hardill.me.uk/wordpress/2019/11/02/pi4-usb-c-gadget/)
 * Surf launch script - myself
