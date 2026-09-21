@@ -105,7 +105,7 @@ That's it! Reboot and test the interface comes up.
 
 Although the above should work fine for Linux and OSX, Windows by default will *believe* the newly attached device is a COM (aka serial) Port and not do anything with it.
 
-You may need to download and replace the driver with this: [RNDIS Ethernet Gadget Driver.zip](/assets/RNDIS%20Ethernet%20Gadget%20Driver.zip)
+You may need to download and replace the driver with this: [RNDIS Ethernet Gadget Driver.zip](RNDIS%20Ethernet%20Gadget%20Driver.zip)
 
 You can also, if desired, choose to share your Ethernet / WiFi connection on your computer with this new interface once installed. 
 

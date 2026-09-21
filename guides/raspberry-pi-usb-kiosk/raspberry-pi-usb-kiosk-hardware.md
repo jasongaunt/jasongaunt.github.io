@@ -44,22 +44,22 @@ Here are some recommendations on reliable SD card brands and product series that
 
 The Pi Zero's (including the 2 W) can all be powered and send network traffic over one USB cable (even directly from a motherboard USB header which is what I did)..
 
-![USB Micro A to USB Header](/assets/USB%20Micro%20A%20to%20USB%20Header.jpg)
+![USB Micro A to USB Header](USB%20Micro%20A%20to%20USB%20Header.jpg)
 
 #### Pi 4 Model B
 
 The Pi 4 Model B can also be powered and network over its Type C connector so you'll need something like this (or Type C USB header, either the USB 2.0 4 or 5 pin or full Type-C will work):
 
-![USB Type C to USB Type A](/assets/USB%20Type%20C%20to%20USB%20Type%20A.jpg)
+![USB Type C to USB Type A](USB%20Type%20C%20to%20USB%20Type%20A.jpg)
 
 #### Pi 1 / 3 Models A and A+
 
 The Pi 1 Models A, A+ and the Pi 3 Model A+ however have more peculiar requirements, you'll need to find a suitable USB Type A Male to USB Type A (or USB header) cable like this:
 
-![USB Type A Male to USB Type A Male](/assets/USB%20Type%20A%20Male%20to%20USB%20Type%20A%20Male.jpg)
+![USB Type A Male to USB Type A Male](USB%20Type%20A%20Male%20to%20USB%20Type%20A%20Male.jpg)
 
 #### Direct motherboard connections
 
 In the cases of connecting that cable plus the Pi 4 Model B to a motherboard header, you may need something like this:
 
-![USB Type A Female to USB Header](/assets/USB%20Type%20A%20Female%20to%20USB%20Header.jpg)
+![USB Type A Female to USB Header](USB%20Type%20A%20Female%20to%20USB%20Header.jpg)
