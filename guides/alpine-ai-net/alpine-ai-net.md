@@ -26,6 +26,10 @@ This documention only covers the staggered 8 pin connector you see in this pinou
 
 ![Ai-NET Male and Female connectors](ai-net%20connectors.jpg)
 
+The pins are as follows:
+
+![Ai-NET Pinout](ai-net%20pinout.jpg)
+
 ## The physical layer
 
 There are two pins used for communication, `Ai-NET +` and `Ai-NET -`. These behave very similar to RS485 and CAN-BUS in that they are inverted reflections of each others behaviour. There are two states for this bus, dominant and recessive, with recessive being the default state.
