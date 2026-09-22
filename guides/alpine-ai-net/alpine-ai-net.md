@@ -22,33 +22,29 @@ This github pages entry serves as the documentation leading up to the implementa
 
 ## The Ai-NET interface
 
-This documention only covers the 8 pin connector that appear as follows...
+This documention only covers the staggered 8 pin connector you see in this pinout:
 
 ![Ai-NET Male and Female connectors](ai-net%20connectors.jpg)
 
-... and all documentation from this point references looking into the connector on a device rather than the cable plug...
-
-![Ai-NET Pinout](ai-net%20pinout.jpg)
-
 ## The physical layer
 
-There are two pins used for communication, Ai-NET High and Ai-NET Low. These behave very similar to RS485 and CAN-BUS in that they are inverted reflections of each others behaviour. There are two states for this bus, dominant and recessive, with recessive being the default state.
+There are two pins used for communication, `Ai-NET +` and `Ai-NET -`. These behave very similar to RS485 and CAN-BUS in that they are inverted reflections of each others behaviour. There are two states for this bus, dominant and recessive, with recessive being the default state.
 
-| State     | Ai-NET High | Ai-NET Low |
+| State     | Ai-NET +    | Ai-NET -   |
 | --------- | ----------- | -----------|
 | Recessive | 2.0~ Volts  | 3.0~ Volts |
 | Dominant  | 5.0~ Volts  | 0.0~ Volts |
 
 These voltages are guidelines, they can *and do* fluctuate, what's important is the following:
 
-* All voltages are relative to chassis ground
+* To signal recessive, `Ai-NET +` must be a lower voltage than `Ai-NET -`
+* To signal dominant, `Ai-NET +` must be a higher voltage than `Ai-NET -`
 * Voltages should not exceed 5 Volts. Above 5.5 Volts can damage hardware
-* To signal recessive, Ai-NET High must be a lower voltage than Ai-NET Low
-* To signal dominant, Ai-NET High must be a higher voltage than Ai-NET Low
+* All voltages are relative to chassis ground not audio or any other ground
 
-The pull-ups to 2.0 and 3.0 volts (for High and Low respectively) are done with weak pull-ups (high ohm resistors) for recessive, with signalling to dominant done more aggressively. See the example circuit below. 
+The recessive state voltages are achieved by weak pull-up resistors in a potential divider set up, one to 5V, another to ground. The resistors vary between `Ai-NET +` and `Ai-NET -` but the principle is the same, holding the floating voltage to either 2.0 or 3.0 volts. Dominant signals are achieved by applying a strong pull-up (to `Ai-NET +`) and strong pull-down (to `Ai-NET -`) at the same time. See the example circuit below for more information.
 
-Although you can "cheat" and just pull Ai-NET Low to ground to signal dominant, this is not advised as it ignores the fault-tolerance of having mirrored signals. You should however implement a circuit like the following:
+Although you can "cheat" and just pull `Ai-NET -` to ground to signal dominant, this is not advised as it ignores the fault-tolerance of having mirrored signals. You should however implement a circuit like the following:
 
 ![Ai-NET Interface Circuit](ai-net%20circuit.jpg)
 
